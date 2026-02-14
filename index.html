@@ -1,0 +1,212 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KODAK LOGISTICS | Student Storage & Pickup – KNUST</title>
+  <meta name="description" content="Affordable, secure luggage, fridge & student item storage with hostel pickup for KNUST students during vacation."/>
+  <meta name="keywords" content="KNUST storage, student luggage Kumasi, fridge storage KNUST, vacation storage Ghana, hostel pickup"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/233545025296?text=Hi%20Kodak%20Logistics%2C%20I%20want%20to%20book%20storage..." 
+     class="whatsapp-btn" target="_blank" aria-label="Chat with Kodak Logistics on WhatsApp">
+    💬 Book on WhatsApp
+  </a>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        KODAK LOGISTICS
+        <span class="tagline">📍 KNUST – Premium Student Pickup & Storage</span>
+      </div>
+
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#book">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Secure & Affordable Student Storage</h1>
+        <p>Store your bags, fridges, buckets & essentials safely during vacation — with fast, reliable pickup from your KNUST hostel.</p>
+
+        <div class="hero-buttons">
+          <a href="#book" class="btn-primary">Book Storage Now</a>
+          <a href="#prices" class="btn-secondary">See Prices</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="section-header">
+        <h2>About Kodak Logistics</h2>
+      </div>
+      <div class="about-content">
+        <p>KODAK LOGISTICS is a student-first storage & pickup service created specifically for <strong>KNUST</strong> students.</p>
+        <p>We provide safe, affordable, stress-free storage during semester breaks and vacations — with convenient pickup directly from your hostel door.</p>
+        <p><strong>Trusted. Secure. Student-friendly.</strong></p>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="prices">
+      <div class="section-header">
+        <h2>Transparent Pricing – Per Semester</h2>
+        <p>No hidden fees. Pay only for what you store.</p>
+      </div>
+
+      <div class="price-cards">
+        <div class="card">
+          <h3>Small Bag</h3>
+          <p class="price">₵40</p>
+        </div>
+        <div class="card">
+          <h3>Medium Bag</h3>
+          <p class="price">₵50</p>
+        </div>
+        <div class="card">
+          <h3>Big Bag</h3>
+          <p class="price">₵60</p>
+        </div>
+        <div class="card highlight">
+          <h3>Fridge</h3>
+          <p class="price">₵70</p>
+        </div>
+        <div class="card free">
+          <h3>Buckets / Small Items</h3>
+          <p class="price">FREE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="booking" id="book">
+      <div class="section-header">
+        <h2>Book Your Storage Today</h2>
+        <p>Fill the form — we’ll confirm via WhatsApp or call within a few hours.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="e.g. Philip Mensah"/>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="e.g. yourname@gmail.com"/>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number (WhatsApp preferred) *</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="e.g. 0545025296"/>
+        </div>
+
+        <div class="form-group">
+          <label for="hostel">Hostel / Pickup Location *</label>
+          <input type="text" id="hostel" name="hostel" required placeholder="e.g. Unity Hall, Q block, Republic Hall"/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Pickup Date *</label>
+            <input type="date" id="date" name="date" required/>
+          </div>
+
+          <div class="form-group">
+            <label for="time">Pickup Time (approx.) *</label>
+            <input type="time" id="time" name="time" required/>
+          </div>
+        </div>
+
+        <!-- Items -->
+        <div class="form-group items-section">
+          <label>Items to Store *</label>
+          <div id="itemsContainer">
+            <div class="item-row">
+              <select class="itemSelect" required>
+                <option value="">Select item</option>
+                <option value="40">Small Bag – ₵40</option>
+                <option value="50">Medium Bag – ₵50</option>
+                <option value="60">Big Bag – ₵60</option>
+                <option value="70">Fridge – ₵70</option>
+                <option value="0">Buckets / Free – ₵0</option>
+              </select>
+              <input type="number" class="quantity" min="1" value="1" required aria-label="Quantity"/>
+              <button type="button" class="remove-btn" style="display: none;">× Remove</button>
+            </div>
+          </div>
+          <button type="button" id="addItem" class="add-btn">+ Add Another Item</button>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Additional Notes / Instructions (optional)</label>
+          <textarea id="description" name="description" rows="4" placeholder="e.g. fragile items, specific pickup instructions..."></textarea>
+        </div>
+
+        <div class="total-section">
+          <p>Total estimated cost: ₵<span id="totalPrice">0.00</span></p>
+          <small>(final amount confirmed during pickup)</small>
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn-primary" disabled>Confirm & Send Booking</button>
+      </form>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-content">
+        <details>
+          <summary>When do I pay for storage?</summary>
+          <p>Payment is made on pickup day. We accept mobile money (MTN MoMo, Vodafone Cash) or cash.</p>
+        </details>
+        <details>
+          <summary>Is my stuff safe?</summary>
+          <p>Yes — stored in a secure, monitored facility with 24/7 surveillance. We take student property seriously.</p>
+        </details>
+        <details>
+          <summary>Can I get my items back early?</summary>
+          <p>Yes, just contact us at least 24 hours in advance. Early retrieval may attract a small fee.</p>
+        </details>
+        <details>
+          <summary>Do you store during Christmas or Easter breaks too?</summary>
+          <p>Yes, we operate during all major vacation periods including Christmas, Easter, and mid-semester breaks.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Kodak Logistics – Proudly serving KNUST students</p>
+    <p>Contact: <a href="https://wa.me/233545025296">+233 54 502 5296</a> | WhatsApp preferred</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+</html>
