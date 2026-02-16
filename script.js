@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const message = encodeURIComponent(
               `Hi Kodak Logistics!\n\nBooking request:\nName: ${name}\nHostel: ${hostel}\nPickup: ${dateVal} at ${timeVal}\nItems:\n${itemsSummary}Total: ₵${total}\n\nPlease confirm. Thank you!`
             );
-            window.open(`https://wa.me/233541249742?text=${message}`, "_blank");
+            window.open(`https://wa.me/233545025296?text=${message}`, "_blank");
           }
         });
 
@@ -191,3 +191,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sections.forEach(section => observer.observe(section));
 });
+
