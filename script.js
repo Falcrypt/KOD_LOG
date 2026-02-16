@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Initialize EmailJS
+  // Initialize EmailJS (public key remains the same)
   emailjs.init("ejP7Frotlqj7ARWao");
 
   const form = document.getElementById("bookingForm");
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description, items: itemsSummary || "No items selected", total
     };
 
-    emailjs.send("service_v4e6v6s", "template_amiu0v6", templateParams)
+    emailjs.send("service_zj0hl04", "template_y6qju8v", templateParams)
       .then(() => {
         Swal.fire({
           title: "Booking Sent!",
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const message = encodeURIComponent(
               `Hi Kodak Logistics!\n\nBooking request:\nName: ${name}\nHostel: ${hostel}\nPickup: ${dateVal} at ${timeVal}\nItems:\n${itemsSummary}Total: ₵${total}\n\nPlease confirm. Thank you!`
             );
-            window.open(`https://wa.me/233545025296?text=${message}`, "_blank");
+            window.open(`https://wa.me/233541249742?text=${message}`, "_blank");
           }
         });
 
